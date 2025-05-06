@@ -1,0 +1,337 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:7174155302598907178",
+      "lastPropertyId": "6:4341206833808076975",
+      "name": "Alcaldia",
+      "properties": [
+        {
+          "id": "1:2787856129426357976",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3385012329462203694",
+          "name": "nombre",
+          "type": 9
+        },
+        {
+          "id": "3:6692172829060228597",
+          "name": "valor1",
+          "type": 6
+        },
+        {
+          "id": "4:1406752529921536103",
+          "name": "valor2",
+          "type": 6
+        },
+        {
+          "id": "5:5393942881424232823",
+          "name": "valor3",
+          "type": 6
+        },
+        {
+          "id": "6:4341206833808076975",
+          "name": "autorId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "1:323703421115081313",
+          "relationTarget": "User"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:7569728793552927977",
+      "lastPropertyId": "5:4552177305873352732",
+      "name": "Mes",
+      "properties": [
+        {
+          "id": "1:7340796921230333525",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6609081810473487385",
+          "name": "nombre",
+          "type": 9
+        },
+        {
+          "id": "3:4466522911727684587",
+          "name": "valor",
+          "type": 8
+        },
+        {
+          "id": "4:375082110207951025",
+          "name": "tipo",
+          "type": 9
+        },
+        {
+          "id": "5:4552177305873352732",
+          "name": "programacionFinancieraId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "2:4282641532778079269",
+          "relationTarget": "ProgramacionFinanciera"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "3:3128913982177604856",
+      "lastPropertyId": "5:6745309679807329418",
+      "name": "Noticia",
+      "properties": [
+        {
+          "id": "1:2464737244771729499",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:8007562821471842984",
+          "name": "titulo",
+          "type": 9
+        },
+        {
+          "id": "3:3625137693453143668",
+          "name": "contenido",
+          "type": 9
+        },
+        {
+          "id": "4:2625524984159989283",
+          "name": "imagenUrl",
+          "type": 9
+        },
+        {
+          "id": "5:6745309679807329418",
+          "name": "autorId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "3:6993051783389633760",
+          "relationTarget": "User"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "4:345871964700118698",
+      "lastPropertyId": "6:2814764357274507160",
+      "name": "OrganismoGobernacion",
+      "properties": [
+        {
+          "id": "1:4067784790601721541",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1342786688286553858",
+          "name": "nombre",
+          "type": 9
+        },
+        {
+          "id": "3:4362210111215080834",
+          "name": "valor1",
+          "type": 6
+        },
+        {
+          "id": "4:55188800973405329",
+          "name": "valor2",
+          "type": 6
+        },
+        {
+          "id": "5:2233526670074417701",
+          "name": "valor3",
+          "type": 6
+        },
+        {
+          "id": "6:2814764357274507160",
+          "name": "autorId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "4:3235330452514694780",
+          "relationTarget": "User"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "5:4782675144622938945",
+      "lastPropertyId": "7:2925264313791041330",
+      "name": "Permission",
+      "properties": [
+        {
+          "id": "1:2104556892798297262",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:4905785335024231036",
+          "name": "userId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "5:7496843907272357492",
+          "relationTarget": "User"
+        },
+        {
+          "id": "3:3095005001535238076",
+          "name": "section",
+          "type": 9
+        },
+        {
+          "id": "4:3026246283247664100",
+          "name": "canCreate",
+          "type": 1
+        },
+        {
+          "id": "5:4323845001798345351",
+          "name": "canEdit",
+          "type": 1
+        },
+        {
+          "id": "6:5449905566176060211",
+          "name": "canDelete",
+          "type": 1
+        },
+        {
+          "id": "7:2925264313791041330",
+          "name": "canPublish",
+          "type": 1
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "6:7972132619406422453",
+      "lastPropertyId": "4:8570675124619399992",
+      "name": "ProgramacionFinanciera",
+      "properties": [
+        {
+          "id": "1:1133004463247755449",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:3620031328046404884",
+          "name": "titulo",
+          "type": 9
+        },
+        {
+          "id": "3:9103654782691648490",
+          "name": "descripcion",
+          "type": 9
+        },
+        {
+          "id": "4:8570675124619399992",
+          "name": "autorId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "6:5192713488096584529",
+          "relationTarget": "User"
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:3615555389127585581",
+          "name": "meses",
+          "targetId": "2:7569728793552927977"
+        }
+      ]
+    },
+    {
+      "id": "7:8884479045905983166",
+      "lastPropertyId": "5:782135398218205475",
+      "name": "ResumenGestion",
+      "properties": [
+        {
+          "id": "1:7735408505402117748",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:956005580824346592",
+          "name": "titulo",
+          "type": 9
+        },
+        {
+          "id": "3:3960402769413705944",
+          "name": "descripcion",
+          "type": 9
+        },
+        {
+          "id": "4:7145135753863543800",
+          "name": "imagenUrl",
+          "type": 9
+        },
+        {
+          "id": "5:782135398218205475",
+          "name": "autorId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "7:9079809643456710430",
+          "relationTarget": "User"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "8:927758119567071851",
+      "lastPropertyId": "6:3890978803951295500",
+      "name": "User",
+      "properties": [
+        {
+          "id": "1:9061487163636692081",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:2339287622334590460",
+          "name": "email",
+          "type": 9
+        },
+        {
+          "id": "3:5215459122887733651",
+          "name": "password",
+          "type": 9
+        },
+        {
+          "id": "4:7237789625372447847",
+          "name": "name",
+          "type": 9
+        },
+        {
+          "id": "5:2871150013653303837",
+          "name": "role",
+          "type": 9
+        },
+        {
+          "id": "6:3890978803951295500",
+          "name": "department",
+          "type": 9
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "8:927758119567071851",
+  "lastIndexId": "7:9079809643456710430",
+  "lastRelationId": "1:3615555389127585581",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
