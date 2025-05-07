@@ -1,3 +1,4 @@
+import 'package:dart_dashboard_backend/model/app_strings.dart';
 import 'package:objectbox/objectbox.dart';
 
 
@@ -9,12 +10,9 @@ class User {
   int id = 0;
 
   String email;
-
   String password;
   String name;
-
   String role; // SUPER_ADMIN, DEPARTMENT_ADMIN, EDITOR, VIEWER, GUEST
-
   String department; // DGAdministracion, DGEgreso, etc.
 
   final createdAt = DateTime.now();
@@ -42,9 +40,29 @@ class User {
     required this.email,
     required this.password,
     required this.name,
-    this.role = 'USER',
+    this.role = AppStrings.user,
     required this.department,
   });
+
+  // Método toJson() para serializar el objeto User
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'email': email,
+      'password': password, // Considera no incluir la contraseña por seguridad
+      'name': name,
+      'role': role,
+      'department': department,
+      'createdAt': createdAt.toIso8601String(), // Serializa la fecha como String
+      'updatedAt': updatedAt.toIso8601String(), // Serializa la fecha como String
+     /* 'permissions': permissions.map((permission) => permission.toJson()).toList(), // Serializa las relaciones
+      'organismosGobernacion': organismosGobernacion.map((organismo) => organismo.toJson()).toList(),
+      'alcaldias': alcaldias.map((alcaldia) => alcaldia.toJson()).toList(),
+      'programacionesFinancieras': programacionesFinancieras.map((programacion) => programacion.toJson()).toList(),
+      'resumenesGestion': resumenesGestion.map((resumen) => resumen.toJson()).toList(),
+      'noticias': noticias.map((noticia) => noticia.toJson()).toList(),*/
+    };
+  }
 }
 
 @Entity()

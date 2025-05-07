@@ -1,3 +1,4 @@
+import 'package:dart_dashboard_backend/api/app_api.dart';
 import 'package:dart_dashboard_backend/model/app_strings.dart';
 import 'package:dart_dashboard_backend/model/repository.dart';
 import 'package:dart_dashboard_backend/model/service.dart';
@@ -15,10 +16,17 @@ void main(List<String> arguments) async {
     directory: 'objectbox-db', // Directorio para almacenar la base de datos
   );
 
+  final userRepo = DataRepository(store);//objectbox
+  final appService = AppService(userRepo);
+  final api = AppApi(appService: appService);
+  await api.start(port: 8080);
+
+/*
   try {
     // Crear instancias del repositorio y servicio
 
-    final userRepo = DataRepository(store);
+    final userRepo = DataRepository(store);//objectbox
+
     final appService = AppService(userRepo);
 
     //final userRepo = UserRepository(store);
@@ -100,7 +108,7 @@ void main(List<String> arguments) async {
     // Cerrar la base de datos al finalizar
     store.close();
     print('\n=== PRUEBAS COMPLETADAS ===');
-  }
+  }*/
 }
 
 // export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$(pwd)/lib/objectbox

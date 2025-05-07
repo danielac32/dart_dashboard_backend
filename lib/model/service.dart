@@ -165,7 +165,9 @@ class AppService {
     return programacionId;
   }
 
-
+  Future<User?> getUserById(int userId) async{
+    return _repository.getUserById(userId);
+  }
   Future<List<Permission>> getPermissionsByUser(int userId) async {
     final user = _repository.getUserById(userId);
     if (user == null) throw Exception('Usuario no encontrado');
